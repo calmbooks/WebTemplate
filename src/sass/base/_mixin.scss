@@ -1,0 +1,85 @@
+
+/* //////////////////////////////////////////////////
+[MIXIN]
+////////////////////////////////////////////////// */
+
+@mixin transform($value) {
+    transform: $value;
+    -webkit-transform: $value;
+    -moz-transform: $value;
+    -ms-transform: $value;
+    -o-transform: $value;
+}
+@mixin transform-origin($value) {
+    transform-origin: $value;
+    -webkit-transform-origin: $value;
+    -moz-transform-origin: $value;
+    -ms-transform-origin: $value;
+    -o-transform-origin: $value;
+}
+@mixin transition($value) {
+    transition: $value;
+    -webkit-transition: $value;
+    -moz-transition: $value;
+    -ms-transition: $value;
+    -o-transition: $value;
+}
+@mixin box-shadow($value) {
+    box-shadow: $value;
+    -webkit-box-shadow: $value;
+    -moz-box-shadow: $value;
+    -ms-box-shadow: $value;
+    -o-box-shadow: $value;
+}
+@mixin border-radius($value) {
+    border-radius: $value;
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    -ms-border-radius: $value;
+    -o-border-radius: $value;
+}
+@mixin box-sizing($value) {
+    box-sizing: $value;
+    -webkit-box-sizing: $value;
+    -moz-box-sizing: $value;
+    -ms-box-sizing: $value;
+    -o-box-sizing: $value;
+}
+@mixin background-size($value) {
+    background-size: $value;
+    -webkit-background-size: $value;
+    -moz-background-size: $value;
+    -ms-background-size: $value;
+    -o-background-size: $value;
+}
+@mixin user-drag($value) {
+    user-drag: $value;
+    -webkit-user-drag: $value;
+    -moz-user-drag: $value;
+    -ms-user-drag: $value;
+    -o-user-drag: $value;
+}
+@mixin user-select($value) {
+    user-select: $value;
+    -webkit-user-select: $value;
+    -moz-user-select: $value;
+    -ms-user-select: $value;
+    -o-user-select: $value;
+}
+@mixin pointer-events($value) {
+    pointer-events: $value;
+    -webkit-pointer-events: $value;
+    -moz-pointer-events: $value;
+    -ms-pointer-events: $value;
+    -o-pointer-events: $value;
+}
+@mixin sprite_retina_background( $sprites, $name ) {
+    background-image: sprite-url($sprites);
+    background-repeat: no-repeat;
+    background-position: 0 round(nth(sprite-position($sprites, $name), 2) / 2);
+    @include background-size(image-width(sprite-path($sprites)) / 2 auto);
+}
+@mixin retina_background( $url, $option ) {
+    background: image-url($url) + " #{$option}";
+    background-size: image-width($url) / 2 image-height($url) / 2;
+}

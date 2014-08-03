@@ -1,0 +1,10 @@
+[
+    "js/pc/base/namespace.js",
+    "js/pc/base/event.js",
+
+    "js/pc/util/EventDispatcher.js",
+    "js/pc/util/Ticker.js",
+    "js/pc/util/System.js",
+
+    "js/pc/Main.js"
+]

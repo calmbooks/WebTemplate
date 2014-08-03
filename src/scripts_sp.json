@@ -1,0 +1,10 @@
+[
+    "js/sp/base/namespace.js",
+    "js/sp/base/event.js",
+
+    "js/sp/util/EventDispatcher.js",
+    "js/sp/util/Ticker.js",
+    "js/sp/util/System.js",
+
+    "js/sp/Main.js"
+]

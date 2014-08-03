@@ -1,0 +1,131 @@
+
+/* //////////////////////////////////////////////////
+[RESET]
+////////////////////////////////////////////////// */
+
+/* --------------------------------------------------
+    0. Resetting default margin and padding
+-------------------------------------------------- */
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+object, iframe, pre, code, p, blockquote,
+form, fieldset, legend,
+table, th, td, caption, tbody, tfoot, thead,
+article, aside, figure, footer, header,
+hgroup, menu, nav, section, audio, video, canvas,
+a, span, em {
+    margin: 0;
+    padding: 0;
+    @include box-sizing(border-box);
+}
+article, aside, figure, figcaption,footer,
+h1, h2, h3, h4, h5, h6, header, hgroup, menu, nav, section, canvas {
+    display: block;
+}
+
+/* --------------------------------------------------
+    1. HTML, Body, Anchor
+-------------------------------------------------- */
+html {
+    overflow-y: scroll;
+    height: 100% !important;
+}
+body {
+    position: relative;
+    min-height: 100%;
+    color: $FONT_COLOR;
+    font-family: Helvetica,Arial,"Hiragino Kaku Gothic ProN","ヒラギノ角ゴ ProN W3",sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    -webkit-text-size-adjust: 100%;
+} 
+html.osWin body {
+    font-family: Helvetica,Arial,"Meiryo","メイリオ",sans-serif;
+}
+a {
+    color: $FONT_COLOR;
+    text-decoration: none;
+}
+a:hover, a:active  {
+    text-decoration: none;
+}
+
+/* --------------------------------------------------
+    2. Heading, Paragraph
+-------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+/* p {} */
+
+/* --------------------------------------------------
+    3. List
+-------------------------------------------------- */
+li { list-style: none; }
+
+/* --------------------------------------------------
+    4. Table
+-------------------------------------------------- */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 100%;
+    font-family: inherit;
+}
+caption, th, td {
+    text-align: left;
+    vertical-align: top;
+    font-weight: normal;
+}
+
+/* --------------------------------------------------
+    5. Form
+-------------------------------------------------- */
+fieldset { border: none; }
+input, textarea, select, label {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: middle;
+    @include box-sizing(border-box);
+}
+label { cursor: pointer; }
+textarea { overflow: auto; }
+legend { display: none; }
+
+/* --------------------------------------------------
+    6. Other
+-------------------------------------------------- */
+img {
+    border: none;
+    vertical-align: top;
+    -ms-interpolation-mode: bicubic;
+    image-rendering: optimizeQuality;
+}
+object {
+    vertical-align: middle;
+    outline: none;
+}
+em, strong {
+    font-weight: bold;
+    font-style: normal;
+}
+small { font-size: 100%; }
+abbr, acronym {
+    border: none;
+    font-variant: normal;
+}
+q:before, q:after { content: ''; }
+address, caption, cite, code, dfn, var {
+    font-weight: normal;
+    font-style: normal;
+}
+code, pre { font-family: monospace; }
+sup { vertical-align: text-top; }
+sub { vertical-align: text-bottom; }
+hr { display: none; }
+

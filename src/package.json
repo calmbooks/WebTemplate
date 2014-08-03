@@ -1,0 +1,17 @@
+{
+  "name": "Tomart",
+  "version": "0.0.1",
+  "author": "kayac",
+  "devDependencies": {
+    "grunt": "",
+    "grunt-contrib-concat": "",
+    "grunt-contrib-watch": "",
+    "grunt-contrib-cssmin": "",
+    "grunt-contrib-compass": "",
+    "grunt-contrib-copy": "",
+    "grunt-contrib-uglify": "",
+    "grunt-imagine": "",
+    "grunt-styleguide": "",
+    "grunt-license-collection": ""
+  }
+}
