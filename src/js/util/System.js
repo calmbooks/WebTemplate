@@ -36,37 +36,105 @@
         return rgb;
     };
 
-    System.clamp = function( min, max ) {
-
-        return Math.random() * (max - min) + min;
+    System.clamp = function( val, min, max ) {
+        if( val < min ) {
+            return min;
+        }
+        else if( max < val) {
+            return max;
+        }
+        else {
+            return val;
+        } 
     };
 
     System.central = function( p1, p2 ) {
-
         return (p2 - p1) * 0.5 + p1;
     };
 
     System.central2d = function( p1, p2 ) {
-
         return {
-            x: (p2.x - p1.x) * 0.5 + p1.x,
-            y: (p2.y - p1.y) * 0.5 + p1.y
+            x : (p2.x - p1.x) * 0.5 + p1.x,
+            y : (p2.y - p1.y) * 0.5 + p1.y
         };
     };
 
     System.round = function( num ) {
-
         return Math.round(num * 10) / 10;
     };
 
     System.dtr = function( d ) {
-
         return d * (Math.PI / 180);
     };
 
     System.rtd = function( r ) {
-
         return r * (180 / Math.PI);
+    };
+
+    System.mix = function( p1, p2, r ) {
+        return ( p2 - p1 ) * r + p1;
+    };
+
+    System.mix2d = function( p1, p2, r ) {
+        return {
+            x : ( p2.x - p1.x ) * r + p1.x,
+            y : ( p2.y - p1.y ) * r + p1.y
+        }
+    };
+
+    System.mix3d = function( p1, p2, r ) {
+        return {
+            x : ( p2.x - p1.x ) * r + p1.x,
+            y : ( p2.y - p1.y ) * r + p1.y,
+            z : ( p2.z - p1.z ) * r + p1.z
+        }
+    };
+
+    System.vector2d = function( p1, p2 ) {
+        return {
+            x : p2.x - p1.x,
+            y : p2.y - p1.y
+        }
+    };
+
+    System.vector3d = function( p1, p2 ) {
+        return {
+            x : p2.x - p1.x,
+            y : p2.y - p1.y,
+            z : p2.z - p1.z
+        }
+    };
+
+    System.normarize2d = function( p ) {
+        var max = Math.max( Math.abs(p.x), Math.abs(p.y) );
+        return {
+            x : p.x / max,
+            y : p.y / max
+        }
+    };
+
+    System.normarize3d = function( p ) {
+        var max = Math.max( Math.abs(p.x), Math.abs(p.y), Math.abs(p.z) );
+        return {
+            x : p.x / max,
+            y : p.y / max,
+            z : p.z / max
+        }
+    };
+
+    System.malutify2d = function( p, r ) {
+        return {
+            x : p.x * r,
+            y : p.y * r
+        }
+    };
+
+    System.malutify3d = function( p, r ) {
+        return {
+            x : p.x * r,
+            y : p.y * r,
+            z : p.z * r
+        }
     };
 
     //-----------------------
