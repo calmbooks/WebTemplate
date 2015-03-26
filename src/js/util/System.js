@@ -1,19 +1,18 @@
 (function(win, doc, ns) {
 
     ns.setNS("util");
-
+    
     //-----------------------
     // Static class
     //-----------------------
     function System() {
-
         throw "System cannot be instantiated.";
     }
 
     //-----------------------
-    // Public function
+    // Static function
     //-----------------------
-    System.convertHsvToRgb = function( hsv ) {
+    System.getRgbFromHsv = function( hsv ) {
 
         var h = hsv.h;
         var s = hsv.s;
@@ -23,6 +22,8 @@
         var p = Math.round(v * (1 - (s / 255)));
         var q = Math.round(v * (1 - (s / 255) * f));
         var t = Math.round(v * (1 - (s / 255) * (1 - f)));
+
+        var rgb = {};
 
         switch( i ) {
             case 0: rgb = { r: v, g: t, b: p }; break;
@@ -63,11 +64,11 @@
         return Math.round(num * 10) / 10;
     };
 
-    System.dtr = function( d ) {
+    System.d2r = function( d ) {
         return d * (Math.PI / 180);
     };
 
-    System.rtd = function( r ) {
+    System.r2d = function( r ) {
         return r * (180 / Math.PI);
     };
 
@@ -140,6 +141,7 @@
     //-----------------------
     // Export
     //-----------------------    
-    ns.util.System = System; 
+    ns.util.System = System;
 
 })(window, document, window.App);
+
